@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS1.6中文下载-反恐精英1.6官方中文版下载与游戏指南</title>
+    <meta name="description" content="CS1.6中文下载，提供反恐精英1.6中文版客户端、单机版、联机版下载，包含安装教程、配置要求、常见问题与游戏设置指南，安全可靠，快速下载。" />
+    <meta name="keywords" content="CS1.6中文下载, 反恐精英1.6下载, CS1.6官方中文版, 反恐精英中文版, CS1.6单机版下载, CS1.6联机版" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* 全局样式与布局 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+            background: #f0f4f8;
+            color: #1a2b3c;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* 页眉与导航 */
+        .site-header {
+            background: #0f1a2b;
+            padding: 1rem 0;
+            border-bottom: 4px solid #e8890c;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .logo span {
+            color: #e8890c;
+            font-weight: 400;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+        .main-nav a {
+            color: #cfd8e3;
+            font-size: 1rem;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #fff;
+            border-bottom-color: #e8890c;
+        }
+
+        /* 首屏下载大区 */
+        .hero-download {
+            background: linear-gradient(135deg, #0b1622 0%, #1b2f42 100%);
+            color: #fff;
+            padding: 3.5rem 0;
+            text-align: center;
+        }
+        .hero-download h2 {
+            font-size: 2.4rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        .hero-download .sub {
+            font-size: 1.15rem;
+            color: #b8c9dd;
+            margin-bottom: 2rem;
+        }
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .btn-download {
+            background: #e8890c;
+            color: #0b0f14;
+            padding: 0.9rem 2.2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 6px 14px rgba(232, 137, 12, 0.3);
+            transition: all 0.2s;
+            display: inline-block;
+            border: none;
+        }
+        .btn-download:hover {
+            background: #f59f2e;
+            transform: translateY(-2px);
+        }
+        .btn-info {
+            background: transparent;
+            border: 2px solid #7a8ea3;
+            color: #e0e7f0;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: 0.2s;
+        }
+        .btn-info:hover {
+            border-color: #e8890c;
+            color: #fff;
+        }
+        .hero-meta {
+            margin-top: 2.2rem;
+            font-size: 0.9rem;
+            color: #9bb0c4;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .hero-meta span::before {
+            content: "✓";
+            margin-right: 0.4rem;
+            color: #e8890c;
+        }
+
+        /* 游戏简介 */
+        .intro-section {
+            padding: 3rem 0;
+            background: #fff;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #0f1a2b;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.4rem;
+        }
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #e8890c;
+            margin-top: 6px;
+        }
+        .intro-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        .intro-text p {
+            margin-bottom: 1.2rem;
+            color: #2c3e50;
+        }
+        .intro-feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+        .feature-item {
+            background: #f5f8fc;
+            padding: 1.2rem;
+            border-radius: 8px;
+            border-left: 4px solid #e8890c;
+        }
+        .feature-item strong {
+            display: block;
+            color: #0f1a2b;
+            margin-bottom: 0.3rem;
+        }
+        .feature-item span {
+            font-size: 0.9rem;
+            color: #556b7e;
+        }
+
+        /* 版本信息区 */
+        .version-section {
+            background: #f0f4f8;
+            padding: 3rem 0;
+        }
+        .version-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+        .version-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: 0.2s;
+            border: 1px solid #e6edf3;
+        }
+        .version-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+        .version-card h3 {
+            font-size: 1.4rem;
+            color: #0f1a2b;
+            margin-bottom: 0.8rem;
+        }
+        .version-card .ver-tag {
+            display: inline-block;
+            background: #e8890c;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin-bottom: 1rem;
+        }
+        .version-card p {
+            color: #3d5166;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+        .version-card .sys-req {
+            background: #f7fafc;
+            padding: 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #2e4a62;
+        }
+
+        /* 安装教程 */
+        .guide-section {
+            background: #fff;
+            padding: 3rem 0;
+        }
+        .guide-step-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            counter-reset: step;
+        }
+        .step-item {
+            background: #f9fbfd;
+            border-radius: 10px;
+            padding: 1.8rem 1.2rem;
+            position: relative;
+            border-top: 3px solid #e8890c;
+        }
+        .step-item .step-num {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e8890c;
+            opacity: 0.4;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .step-item h4 {
+            margin-bottom: 0.5rem;
+            color: #0f1a2b;
+        }
+        .step-item p {
+            font-size: 0.9rem;
+            color: #40576b;
+        }
+
+        /* 配置要求 */
+        .spec-section {
+            background: #0f1a2b;
+            color: #e0e7f0;
+            padding: 3rem 0;
+        }
+        .spec-section .section-title {
+            color: #fff;
+        }
+        .spec-section .section-title::after {
+            background: #e8890c;
+        }
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .spec-box {
+            background: #1b2a3a;
+            padding: 1.8rem;
+            border-radius: 8px;
+        }
+        .spec-box h4 {
+            color: #e8890c;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .spec-box ul li {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #2f4256;
+            font-size: 0.95rem;
+        }
+        .spec-box ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* FAQ 区 */
+        .faq-section {
+            background: #f0f4f8;
+            padding: 3rem 0;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 2rem;
+        }
+        .faq-item {
+            background: #fff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #e8890c;
+        }
+        .faq-item details {
+            color: #2c3e50;
+        }
+        .faq-item summary {
+            font-weight: 600;
+            cursor: pointer;
+            color: #0f1a2b;
+            margin-bottom: 0.4rem;
+        }
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #40576b;
+        }
+
+        /* 页脚 */
+        .site-footer {
+            background: #0a111c;
+            color: #93a5b8;
+            padding: 2.5rem 0 1.5rem;
+            font-size: 0.9rem;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-col h5 {
+            color: #fff;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+        .footer-col ul li {
+            padding: 0.2rem 0;
+        }
+        .footer-col a:hover {
+            color: #e8890c;
+        }
+        .footer-bottom {
+            border-top: 1px solid #1f2e3d;
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 900px) {
+            .intro-content {
+                grid-template-columns: 1fr;
+            }
+            .version-cards {
+                grid-template-columns: 1fr;
+            }
+            .guide-step-list {
+                grid-template-columns: 1fr 1fr;
+            }
+            .spec-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.2rem;
+            }
+            .hero-download h2 {
+                font-size: 1.8rem;
+            }
+            .guide-step-list {
+                grid-template-columns: 1fr;
+            }
+            .intro-feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 页眉区 -->
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>CS1.6<span>中文站</span></h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">游戏下载</a></li>
+                <li><a href="#">版本介绍</a></li>
+                <li><a href="#">安装教程</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- 首屏下载区 -->
+<section class="hero-download">
+    <div class="container">
+        <h2>CS1.6 中文版 安全高速下载</h2>
+        <p class="sub">官方中文语言 · 单机/联机双模式 · 稳定兼容 Win10/11</p>
+        <div class="download-buttons">
+            <a href="#" class="btn-download">立即下载 CS1.6 中文版</a>
+            <a href="#" class="btn-info">查看版本说明</a>
+        </div>
+        <div class="hero-meta">
+            <span>中文界面完整版</span>
+            <span>免Steam启动</span>
+            <span>含机器人对战</span>
+            <span>支持局域网联机</span>
+        </div>
+    </div>
+</section>
+
+<!-- 游戏简介 -->
+<section class="intro-section">
+    <div class="container">
+        <h2 class="section-title">CS1.6 中文版简介</h2>
+        <div class="intro-content">
+            <div class="intro-text">
+                <p>《反恐精英 1.6》（Counter-Strike 1.6）是 Valve 旗下最具标志性的战术射击游戏之一。作为 CS 系列承前启后的经典版本，CS1.6 凭借平衡的武器系统、极富策略的团队对抗以及极高的竞技性，至今仍在全球拥有大量忠实玩家。</p>
+                <p>本站提供的 CS1.6 中文下载包，集成了完整简体中文语言文件、高清界面优化以及常用实用插件，免去玩家自行寻找汉化补丁的烦恼。下载后即可畅玩，无论是单机对战机器人还是与好友局域网联机，均可获得原汁原味的经典体验。</p>
+                <p>适合怀旧玩家、电竞入门者以及希望体验早期 CS 竞技氛围的用户。文件经过安全检测，无病毒无捆绑，请放心下载使用。</p>
+            </div>
+            <div class="intro-feature-grid">
+                <div class="feature-item">
+                    <strong>完整中文汉化</strong>
+                    <span>菜单、武器、地图全部中文化，界面友好</span>
+                </div>
+                <div class="feature-item">
+                    <strong>内置机器人</strong>
+                    <span>支持离线添加 Bot，随时训练枪法与战术</span>
+                </div>
+                <div class="feature-item">
+                    <strong>纯净无插件</strong>
+                    <span>基础版本不含广告与第三方捆绑软件</span>
+                </div>
+                <div class="feature-item">
+                    <strong>兼容性优化</strong>
+                    <span>支持 Win7/10/11 及常见分辨率调节</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 版本信息区 -->
+<section class="version-section">
+    <div class="container">
+        <h2 class="section-title">CS1.6 中文版版本选择</h2>
+        <div class="version-cards">
+            <div class="version-card">
+                <h3>中文单机版</h3>
+                <span class="ver-tag">适合单人练习</span>
+                <p>集成最新机器人AI，可自定义人数与难度，适合新手熟悉地图、练习枪法，无需联网随时开战。</p>
+                <div class="sys-req">文件大小：约 300MB<br>运行环境：Windows 7/10/11</div>
+            </div>
+            <div class="version-card">
+                <h3>中文联机版</h3>
+                <span class="ver-tag">局域网/互联网</span>
+                <p>支持局域网直连与平台联机，经典比赛规则，包含常用比赛地图，适合朋友开黑或线下对战。</p>
+                <div class="sys-req">文件大小：约 450MB<br>运行环境：Windows 7/10/11</div>
+            </div>
+            <div class="version-card">
+                <h3>完整收藏版</h3>
+                <span class="ver-tag">含全部地图</span>
+                <p>包含全部官方地图与常用社区地图，集成高分辨率补丁，适合收藏及追求完整内容的玩家。</p>
+                <div class="sys-req">文件大小：约 800MB<br>运行环境：Windows 10/11 最佳</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 安装教程区 -->
+<section class="guide-section">
+    <div class="container">
+        <h2 class="section-title">安装步骤（超简单 4 步）</h2>
+        <div class="guide-step-list">
+            <div class="step-item">
+                <span class="step-num">01</span>
+                <h4>下载压缩包</h4>
+                <p>点击上方下载按钮，获取 CS1.6 中文版压缩文件。</p>
+            </div>
+            <div class="step-item">
+                <span class="step-num">02</span>
+                <h4>解压文件</h4>
+                <p>使用 WinRAR 或 7-Zip 解压至任意英文路径（如 D:\CS1.6）。</p>
+            </div>
+            <div class="step-item">
+                <span class="step-num">03</span>
+                <h4>运行启动器</h4>
+                <p>双击 cstrike.exe 或 hl.exe，即可进入中文游戏界面。</p>
+            </div>
+            <div class="step-item">
+                <span class="step-num">04</span>
+                <h4>开始游戏</h4>
+                <p>选择“新建游戏”添加机器人，或进入“局域网”联机对战。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 配置要求 -->
+<section class="spec-section">
+    <div class="container">
+        <h2 class="section-title">配置要求（极低门槛）</h2>
+        <div class="spec-grid">
+            <div class="spec-box">
+                <h4>最低配置</h4>
+                <ul>
+                    <li>操作系统：Windows 7 / 8 / 10</li>
+                    <li>处理器：Intel Pentium 4 或同等</li>
+                    <li>内存：512 MB</li>
+                    <li>显卡：支持 DirectX 8.0 以上</li>
+                    <li>存储空间：1 GB 可用空间</li>
+                </ul>
+            </div>
+            <div class="spec-box">
+                <h4>推荐配置</h4>
+                <ul>
+                    <li>操作系统：Windows 10 / 11 64位</li>
+                    <li>处理器：Intel Core i3 或 AMD 同等</li>
+                    <li>内存：2 GB 以上</li>
+                    <li>显卡：独立显卡 256 MB 以上</li>
+                    <li>存储空间：2 GB 可用空间</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 常见问题FAQ -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">CS1.6 中文版常见问题</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <details>
+                    <summary>下载后无法进入游戏怎么办？</summary>
+                    <p>请确保解压路径为纯英文，且关闭杀毒软件误报。尝试右键管理员身份运行 cstrike.exe。若仍无效，请安装 DirectX 9.0c 运行库。</p>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>如何与好友进行局域网联机？</summary>
+                    <p>确保所有玩家在同一局域网内，进入游戏后选择“局域网”->“创建游戏”，其他人通过“刷新”找到房间即可加入。若无法发现房间，请关闭防火墙或使用平台联机工具。</p>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>如何添加机器人？</summary>
+                    <p>在游戏主界面选择“新建游戏”，选择地图后点击“开始”，然后按键盘“=”键（或H键）调出机器人菜单，即可添加 Bot。</p>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>中文版是否支持自定义键位？</summary>
+                    <p>支持。在游戏“选项”->“键盘”中可自由设置所有按键，与英文版功能完全一致，中文界面更便于操作。</p>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>下载文件安全吗？</summary>
+                    <p>本站所有安装包均经过杀毒软件安全扫描，无病毒、无捆绑软件。建议下载后使用 360 或火绒进行二次查杀，确保安全。</p>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Win11 可以运行 CS1.6 吗？</summary>
+                    <p>可以。Win11 下若遇到兼容性问题，可右键 cstrike.exe -> 属性 -> 兼容性 -> 选择 Windows 7 模式运行，并勾选“以管理员身份运行”。</p>
+                </details>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h5>关于我们</h5>
+                <ul>
+                    <li>CS1.6 中文下载站</li>
+                    <li>致力于经典游戏资源分享</li>
+                    <li>所有文件仅供学习交流</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>下载资源</h5>
+                <ul>
+                    <li><a href="#">CS1.6 单机版</a></li>
+                    <li><a href="#">CS1.6 联机版</a></li>
+                    <li><a href="#">CS1.6 地图包</a></li>
+                    <li><a href="#">CS1.6 武器模型</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>游戏帮助</h5>
+                <ul>
+                    <li><a href="#">安装教程</a></li>
+                    <li><a href="#">控制台命令</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>友情提示</h5>
+                <ul>
+                    <li>适度游戏益脑</li>
+                    <li>沉迷游戏伤身</li>
+                    <li>合理安排时间</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 CS1.6中文下载站 版权所有 · 请支持正版游戏 · 本站资源仅用于技术学习</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+                          </html>
